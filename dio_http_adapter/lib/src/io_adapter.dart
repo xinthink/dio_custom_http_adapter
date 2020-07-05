@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
-import 'package:io_http/http.dart';
+import 'package:io_http/io_http.dart';
 import 'package:meta/meta.dart';
 
 typedef OnHttpClientCreate = dynamic Function(HttpClient client);

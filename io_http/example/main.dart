@@ -1,4 +1,4 @@
-import 'package:io_http/http.dart';
+import 'package:io_http/io_http.dart';
 
 void main(List<String> args) async {
   if (args == null || args.length < 2) {
@@ -16,7 +16,7 @@ void main(List<String> args) async {
   final uri = Uri.parse(uriArg);
   final host = args[1];
   final client = IoHttpClient();
-  final req = await client.openUrl('get', Uri.parse('https://216.239.38.21'), host);
+  final req = await client.openUrl('get', uri, host);
   final resp = await req.close();
   print(resp.headers);
 }

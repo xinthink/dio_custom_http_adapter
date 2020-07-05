@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:dio_http_adapter/adapter.dart';
+import 'package:dio_http_adapter/dio_http_adapter.dart';
 
 void main(List<String> args) async {
   if (args == null || args.length < 2) {

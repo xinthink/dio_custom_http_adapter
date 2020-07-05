@@ -10,9 +10,12 @@ environment:
 
 dependencies:
   dio: ^3.0.0
-  io_http:
-    path: ../io_http
+  io_http: ^0.1.0
 
 dev_dependencies:
   test: ^1.9.4
   pedantic: ^1.9.0
+
+# dependency_orverrides:
+#   io_http:
+#     path: ../io_http
