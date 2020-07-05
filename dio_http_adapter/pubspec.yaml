@@ -1,7 +1,7 @@
 name: dio_http_adapter
-description: A customized dio HttpClientAdapter.
+description: A customized dio HttpClientAdapter, to workaround the Host verification issue during SSL handshake.
 
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://github.com/xinthink/dio_custom_http_adapter/dio_http_adapter
 repository: https://github.com/xinthink/dio_custom_http_adapter/dio_http_adapter
 
