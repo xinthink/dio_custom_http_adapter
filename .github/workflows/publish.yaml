@@ -12,7 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Prepare pub credentials
-      run: echo "${{ secrets.PUB_CREDENTIALS }}" | base64 --decode > ~/.pub-cache/credentials.json
+      run: |
+        mkdir ~/.pub-cache
+        echo "${{ secrets.PUB_CREDENTIALS }}" | base64 --decode > ~/.pub-cache/credentials.json
     - name: Publish io_http
       run: |
         cd io_http && pub get
