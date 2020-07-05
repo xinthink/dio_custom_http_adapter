@@ -15,11 +15,11 @@ jobs:
       image:  google/dart:dev
     steps:
     - uses: actions/checkout@v1
-    - run: |
+    - name: Check io_http
+      run: |
         cd io_http
-        pub get
-        tool/check
-    - run: |
+        pub get && tool/check
+    - name: Check dio_http_adapter
+      run: |
         cd dio_http_adapter
-        pub get
-        tool/check
+        pub get && tool/check
