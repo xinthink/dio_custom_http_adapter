@@ -1,0 +1,28 @@
+name: publish
+
+on:
+  release:
+    types: published
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      image:  google/dart:dev
+    steps:
+    - uses: actions/checkout@v1
+    - run: pub get
+    - name: Publish
+      run: |
+        echo "${{ secrets.PUB_CREDENTIALS }}" | base64 --decode > ~/.pub-cache/credentials.json
+        dartfmt -l 80 -w .
+        dartanalyzer --options analysis_options.yaml .
+        pub run test
+        pub publish --force
+    - name: notification
+      if: cancelled() == false
+      uses: xinthink/action-telegram@v1.1
+      with:
+        botToken: ${{ secrets.TelegramBotToken }}
+        chatId: ${{ secrets.TelegramTarget }}
+        jobStatus: ${{ job.status }}

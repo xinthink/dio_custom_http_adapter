@@ -1,0 +1,55 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+docs/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+# .idea/
+**/.idea/.name
+**/.idea/assetWizardSettings.xml
+**/.idea/caches
+# .idea/dictionaries
+**/.idea/gradle.xml
+**/.idea/jsLibraryMappings.xml
+**/.idea/libraries
+**/.idea/misc.xml
+**/.idea/modules.xml
+**/.idea/navEditor.xml
+**/.idea/runConfigurations.xml
+**/.idea/tasks.xml
+**/.idea/vcs.xml
+**/.idea/workspace.xml
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# For library packages, don’t check in the lockfile, because libraries are expected to work with a range of dependency versions.
+# see https://dart.dev/tools/pub/cmd/pub-upgrade
+pubspec.lock
+
+# Coverage
+coverage/
+test/.test_coverage.dart
+coverage_badge.svg

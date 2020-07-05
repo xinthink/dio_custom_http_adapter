@@ -1,0 +1,25 @@
+name: check
+
+on:
+  push:
+    branches:
+      - master
+      - 'refs/pull/*'
+      - '!**/publish'
+      - '!publish'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container:
+      image:  google/dart:dev
+    steps:
+    - uses: actions/checkout@v1
+    - run: |
+        cd io_http
+        pub get
+        tool/check
+    - run: |
+        cd dio_http_adapter
+        pub get
+        tool/check

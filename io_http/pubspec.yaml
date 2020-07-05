@@ -1,0 +1,13 @@
+name: io_http
+description: A customized HttpClient based on the dart:io package.
+
+version: 0.1.0
+homepage: https://github.com/xinthink/dio_custom_http_adapter/io_http
+repository: https://github.com/xinthink/dio_custom_http_adapter/
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dev_dependencies:
+  test: ^1.9.4
+  pedantic: ^1.9.0
