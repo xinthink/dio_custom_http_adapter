@@ -1,8 +1,8 @@
 name: io_http
-description: A customized HttpClient based on the dart:io package.
+description: A customized dart:io HttpClient, mostly works with dio_http_adapter to workaround the Host verification issue during SSL handshake.
 
-version: 0.1.0+1
-homepage: https://github.com/xinthink/dio_custom_http_adapter/io_http
+version: 0.1.0+2
+homepage: https://github.com/xinthink/dio_custom_http_adapter/tree/master/io_http
 repository: https://github.com/xinthink/dio_custom_http_adapter/
 
 environment:
